@@ -3,4 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = ( nextConfig = {} ) => {
+  return {
+    ...nextConfig,
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+    images: {
+      domains: [ 'barney' ],
+    },
+  };
+};

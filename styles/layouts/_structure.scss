@@ -1,0 +1,80 @@
+
+body{
+    background: #000;
+    transition: 1s background-color;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#page{
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .viewport__hit{
+        z-index: 9999;
+        width: 90%;
+        height: 250px;
+        position: absolute;
+        left: 10%;
+        bottom: 50px;
+    }
+}
+
+
+
+.scroll-container {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    padding: 40% 0 50px 0;
+    box-sizing: border-box;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+#project-container{
+    top: 0;
+    padding: 0;
+}
+
+@include respond-to("small"){
+
+    .viewport {
+
+        .viewport__hit{
+            height: 400px;
+            left: 45%;
+            bottom: 130px;
+            width: 55%;
+        }
+    }
+
+    .scroll-container {
+        padding: 50% 0 200px 0;
+    }
+
+}

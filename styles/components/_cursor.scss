@@ -1,0 +1,30 @@
+
+body{
+    /* cursor: none !important; */
+}
+
+a{
+    /* cursor: none !important; */
+}
+
+.cursor{
+
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    mix-blend-mode: exclusion;
+
+
+    &:before{
+        content: "";
+        background: #fff;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+    }
+
+}

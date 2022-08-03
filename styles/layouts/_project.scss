@@ -1,0 +1,159 @@
+.page--project{
+    background: #A39EA3;
+}
+
+.project__home{
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 20px;
+    left: 15%;
+    z-index: 999;
+
+    &:before, &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 49%;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transition: 0.5s;
+    }
+
+    &:before{
+        @include rotate(45deg);
+    }
+
+    &:after {
+        @include rotate(135deg);
+    }
+
+    &:hover{
+        &:before{
+            @include rotate(0deg);
+        }
+        &:after{
+            @include rotate(180deg);
+        }
+    }
+
+
+}
+
+.project{
+
+    margin: 120px 40px 0 55px;
+    padding-bottom: 80px;
+    position: relative;
+
+    .project__intro{
+        width: 100%;
+
+        h2{
+            margin-bottom: 0;
+        }
+    }
+
+    .project__item{
+        transition: 1s;
+        @include translate-y(50px);
+
+        &.is-visible{
+            opacity: 1;
+            @include translate-y(0px);
+        }
+
+    }
+
+    .project__image{
+
+        width: 100%;
+        float: right;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        img{
+            display: block;
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+        }
+
+        &:nth-child(even){
+            float: left;
+        }
+
+    }
+
+    .project__video{
+        width: 100%;
+        height: auto;
+        display: block;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+
+        &.project__video--mobile{
+            width: 40%;
+        }
+
+    }
+
+    .project__intro{
+
+    }
+
+    .project__link{
+        display: block;
+        padding-left: 40px;
+        position: relative;
+
+        &:after{
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            top: 1.0rem;
+            left: 0;
+            transition: 0.5s;
+            mix-blend-mode: exclusion;
+        }
+
+        &:hover{
+            transition-delay: 0s;
+            color: rgba(255,255,255,0.6);
+            &:after{
+                width: 15px;
+                left: 20px;
+            }
+        }
+
+
+    }
+
+}
+
+@include respond-to("small"){
+
+    .project__home {
+        top: 120px;
+    }
+
+    .project{
+        margin: 120px 140px 0 20%;
+        .project__intro{
+            width: 50%;
+        }
+        .project__image {
+            width: 80%;
+            float: right;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+}

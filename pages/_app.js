@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import '../styles/app.scss';
+import Layout from '../components/layout';
+import {InfoProvider} from '../context/info';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function App({Component, pageProps}) {
+    return (
+        <InfoProvider>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </InfoProvider>
+    )
 }
 
-export default MyApp
+export default App

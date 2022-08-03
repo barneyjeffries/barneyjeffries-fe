@@ -1,0 +1,3 @@
+@mixin column-width($col-num, $gutter: $grid-gutter) {
+    width: (100% / (12 / $col-num)) - ($gutter * 2);
+}
