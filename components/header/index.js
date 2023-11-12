@@ -9,16 +9,16 @@ export default function Header() {
     };
 
     return (
-        <header className="header">
-            <h1 className="header__logo">
+        <header className="site-header">
+            <h1 className="site-header__logo">
                 Barney Jeffries
-                <span className="header__logo-line">_</span>
+                <span className="site-header__logo-line">_</span>
             </h1>
-            <h2 className="header__tagline">
+            <h2 className="site-header__tagline">
                 {`/*`} creative coder & front-end designer {`*/`}
             </h2>
-            <div className="header__info">
-                <button onClick={ handleClick } className="header__info-toggle">
+            <div className="site-header__info">
+                <button onClick={ handleClick } className="site-header__info-toggle">
                     { infoIsOpen ? (
                         'Close'
                     ) : (

@@ -1,77 +1,74 @@
 
-.header {
-
+.site-header {
     position: relative;
     z-index: 9999;
+}
 
-    .header__logo {
-        text-transform: uppercase;
-        font-size: 3rem;
-        position: fixed;
-        font-weight: 400;
-        left: 50px;
-        top: 20px;
-        margin: 0;
-        padding-bottom: 3px;
-        overflow: hidden;
-        transform-origin: top left;
-        letter-spacing: 2px;
+.site-header__logo {
+    text-transform: uppercase;
+    font-size: 3rem;
+    position: fixed;
+    font-weight: 400;
+    left: 50px;
+    top: 20px;
+    margin: 0;
+    padding-bottom: 3px;
+    overflow: hidden;
+    transform-origin: top left;
+    letter-spacing: 2px;
 
-        @include rotate(90deg);
+    @include rotate(90deg);
+}
 
-    }
+.site-header__logo-line {
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 4px;
+}
 
-    .header__logo-line {
-        display: block;
-        position: absolute;
-        left: 2px;
-        top: 4px;
-    }
+.site-header__tagline {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    font-size: 1.3rem;
+    font-family: $base-font-family;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 
-    .header__tagline {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        margin: 0;
-        font-size: 1.3rem;
-        font-family: $base-font-family;
-        font-weight: 400;
-        letter-spacing: 2px;
-    }
+.site-header__info{
+    font-size: 1.8rem;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 20px;
+    width: 80px;
 
-    .header__info{
-        font-size: 1.8rem;
-        position: fixed;
-        right: 0;
-        text-align: center;
-        top: 20px;
-        width: 80px;
-
-         a{
-             color: #fff;
-             display: block;
-
-             &.is-visible{
-                 opacity: 1;
-                 letter-spacing: 2px;
-                 &:hover{
-                     letter-spacing: 4px;
-                     opacity: 0.5;
-                 }
-             }
-         }
-
-    }
-
-    .header__info-toggle {
-        background: transparent;
-        border: none;
+    a{
         color: #fff;
-        font-size: 1.8rem;
-        padding: 0;
-        text-transform: uppercase;
+        display: block;
+
+        &.is-visible{
+            opacity: 1;
+            letter-spacing: 2px;
+            &:hover{
+                letter-spacing: 4px;
+                opacity: 0.5;
+            }
+        }
     }
 
+}
+
+.site-header__info-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 .site-loaded{

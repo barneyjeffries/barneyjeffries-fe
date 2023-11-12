@@ -18,9 +18,9 @@ export default function Layout({children}) {
                 <link rel="icon" href="/favicon.ico"/>
                 <link key="fonts" rel="stylesheet" href="//use.typekit.net/abe0jtk.css"/>
             </Head>
-            <Header  />
+            <Header />
 
-            <main>
+            <main className="site-main">
                 {children}
                 {infoDisplay}
             </main>

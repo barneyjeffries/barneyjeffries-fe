@@ -1,4 +1,4 @@
-import '../styles/app.scss';
+import '../styles/app.css';
 import Layout from '../components/layout';
 import {InfoProvider} from '../context/info';
 
