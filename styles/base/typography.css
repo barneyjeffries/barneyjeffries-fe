@@ -22,6 +22,7 @@ p,
 li {
 	font-size: var(--fs-21);
 	line-height: var(--lh-sm);
+	margin: 0 0 var(--sp-30);
 }
 
 

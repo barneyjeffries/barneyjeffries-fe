@@ -2,13 +2,13 @@ import { useLayoutEffect } from 'react';
 import useInfo from '../../utils/hooks/use-info';
 import Head from 'next/head';
 import { SiteHeader } from '../site-header';
-import Info from '../info';
+import { SiteInfo } from '../site-info';
 
 export default function Layout({children}) {
 
     const [ infoIsOpen, ] = useInfo(false);
 
-    const infoDisplay = infoIsOpen ? <Info /> : null;
+    const infoDisplay = infoIsOpen ? <SiteInfo /> : null;
 
     return (
         <>
