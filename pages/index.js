@@ -1,9 +1,26 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import Header from '../components/header';
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
+import { useEffect, useState } from "react";
+import WorkItem from '../components/work/work-item';
+import WorkInfo from '../components/work/work-info';
 
 export default function Home({ projects }) {
+    const [infoToDisplay, setInfoToDisplay] = useState(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        let smoother = ScrollSmoother.create({
+            smooth: 2,
+            normalizeScroll: true, // prevents address bar from showing/hiding on most devices, solves various other browser inconsistencies
+            ignoreMobileResize: true, // skips ScrollTrigger.refresh() on mobile resizes from address bar showing/hiding
+            effects: true,
+            preventDefault: true
+        });
+
+    },[]);
 
     return (
         <div>
@@ -12,41 +29,22 @@ export default function Home({ projects }) {
                 <meta name="description" content="Creative Coder"/>
             </Head>
 
-            <main>
-                { projects.map((project, i) => (
-                    <div key={`work-info-${i}`} className="work-info">
-                        <h2 className="work-info__title">{ project.title.rendered }</h2>
-                        <p className="work-info__details">
-                            { project.acf.overview }
-                        </p>
-                        <a href="<?php the_permalink(); ?>" className="work-info__link"
-                           title="<?php the_title(); ?> - <?php the_field('overview'); ?>">View project</a>
-                    </div>
-                ))}
+            { infoToDisplay !== null && (
+                <WorkInfo key={projects[infoToDisplay].title.rendered} index={infoToDisplay} project={projects[infoToDisplay]} />
+            )}
 
-                <section className="work">
-                    <ul className="work__items">
-                        { projects.map((project, i) => (
-                            <li key={i} className="work__item">
-                                <div className="work__image">
-                                    <Link href={`/project/${project.slug}`}>
-                                        <a className="work__link">
-                                            <Image
-                                                src={project._embedded['wp:featuredmedia']['0'].source_url}
-                                                width={project._embedded['wp:featuredmedia']['0'].media_details.width}
-                                                height={project._embedded['wp:featuredmedia']['0'].media_details.height}
-                                                layout="fill"
-                                                objectFit="cover"
-                                                objectPosition="center"
-                                            />
-                                        </a>
-                                    </Link>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </section>
-            </main>
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <section className="work">
+                        <ul className="work__items">
+                            { projects.map((project, i) => (
+                                <WorkItem key={project.title.rendered} index={i} project={project} handleFocus={setInfoToDisplay} displayClass={infoToDisplay === i ? 'is-visible' : ''} />
+                            ))}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
         </div>
     )
 }

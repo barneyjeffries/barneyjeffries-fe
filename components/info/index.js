@@ -15,7 +15,6 @@ export default function Info() {
         others.forEach((o)=>{
             val += o.percent
         })
-
         return val;
     }
 
@@ -33,11 +32,11 @@ export default function Info() {
                         <h3>Info</h3>
                     </div>
                     <div className="col-9">
-                        <p>I am a front-end designer and web developer with 20 years experience across a huge range of
+                        <p>I am a front-end & web engineer with 20 years experience across a huge range of
                             projects and technologies.</p>
                         <p>I work with agencies, marketing companies and other digital professionals to create highly
                             crafted interactive experiences on mobile, web and tablet.</p>
-                        <p>I am currently working for 10up.</p>
+                        <p>I am currently working as senior front-end engineer for 10up.</p>
                     </div>
                 </div>
                 <div className="info__section group not-for-mobile">
@@ -46,7 +45,6 @@ export default function Info() {
                         <p>(Last 7 days)</p>
                     </div>
                     <div className="col-9">
-
                         <dl className="info__stats">
                             {data && (
                                 <>
@@ -82,9 +80,7 @@ export default function Info() {
                                     </dd>
                                 </>
                             )}
-
                         </dl>
-
 
                         <div id="info__stats-currently-playing">
 
