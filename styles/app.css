@@ -1,4 +1,5 @@
-body {
-	background-color: #f00;
-	margin: 0;
-}
+/* Normalise */
+@import url("normalize.css");
+
+/* Globals */
+@import url("global/index.css");
