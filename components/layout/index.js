@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react';
 import useInfo from '../../utils/hooks/use-info';
 import Head from 'next/head';
-import Header from '../header';
+import { SiteHeader } from '../site-header';
 import Info from '../info';
 
 export default function Layout({children}) {
@@ -16,9 +16,8 @@ export default function Layout({children}) {
                 <title key="title">Barney Jeffries - Creative Coder</title>
                 <meta name="description" content="Creative Coder"/>
                 <link rel="icon" href="/favicon.ico"/>
-                <link key="fonts" rel="stylesheet" href="//use.typekit.net/abe0jtk.css"/>
             </Head>
-            <Header />
+            <SiteHeader />
 
             <main className="site-main">
                 {children}

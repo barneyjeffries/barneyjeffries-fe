@@ -1,6 +1,6 @@
 import useInfo from '../../utils/hooks/use-info';
 
-export default function Header() {
+export const SiteHeader = () => {
 
     const [ infoIsOpen, setInfoIsOpen ] = useInfo(false);
 

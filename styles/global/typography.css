@@ -1,0 +1,29 @@
+:root {
+
+	/* Font families */
+	--ff-body: aktiv-grotesk, "Helvetica", "Arial", sans-serif;
+	--ff-header: aktiv-grotesk-thin, "Helvetica", "Arial", sans-serif;
+
+	/* Font sizes */
+	--fs-16: 1rem;
+	--fs-18: 1.125rem;
+	--fs-21: 1.313rem;
+	--fs-24: 1.5rem;
+	--fs-30: 1.875rem;
+	--fs-48: 3rem;
+	--fs-60: 3.75rem;
+	--fs-80: 5rem;
+
+	/* Line heights */
+	--lh-sm: 1.2;
+	--lh-md: 1.5;
+
+	/* Font weights */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-bold: 700;
+
+	/* Letter spacing */
+	--ls-md: 2px;
+	--ls-lg: 4px;
+}

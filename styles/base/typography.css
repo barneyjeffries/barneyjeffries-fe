@@ -1,0 +1,36 @@
+body {
+	color: var(--c-white);
+	font-family: var(--ff-body);
+	font-weight: var(--fw-light);
+	line-height: var(--lh-sm);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--c-white);
+	font-family: var(--ff-header);
+	font-weight: var(--fw-light);
+	margin-bottom: 2.5rem;
+	margin-top: 0;
+}
+
+p,
+li {
+	font-size: var(--fs-21);
+	line-height: var(--lh-sm);
+}
+
+
+a {
+	color: var(--c-white);
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+a:hover {
+	opacity: 0.6;
+}

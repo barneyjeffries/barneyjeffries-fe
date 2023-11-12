@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cssnano": "^6.0.1",
     "gsap": "npm:@gsap/shockingly@^3.10.4",
     "next": "12.1.6",
     "normalize.css": "^8.0.1",
+    "postcss": "^8.4.31",
+    "postcss-import": "^15.1.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-preset-env": "^9.3.0",
+    "postcss-replace": "^2.0.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "swr": "^1.3.0"

@@ -1,4 +1,3 @@
-import Layout from '../components/layout';
 import Head from 'next/head';
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -7,16 +6,16 @@ import { useEffect, useState } from "react";
 import WorkItem from '../components/work/work-item';
 import WorkInfo from '../components/work/work-info';
 
-export default function Home({ projects }) {
+export default function Home( { projects } ) {
 
     return (
-        <Layout>
+        <>
             <Head>
                 <title key="title">Barney Jeffries - Creative Coder</title>
                 <meta name="description" content="Creative Coder"/>
             </Head>
 
-            <section className="work">
+            <section className="work" style={ {display: 'none'}}>
                 <ul className="work__items">
                     { projects.map( ( project, i) => (
                         <WorkItem key={ project.id } index={i} project={project} />
@@ -24,7 +23,7 @@ export default function Home({ projects }) {
                 </ul>
             </section>
 
-        </Layout>
+        </>
     )
 }
 
