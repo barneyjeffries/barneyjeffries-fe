@@ -1,0 +1,36 @@
+.work-info {
+	bottom: var(--sp-80);
+	left: 10%;
+	mix-blend-mode: exclusion;
+	position: absolute;
+	transition-delay: 1s;
+	width: 40%;
+	z-index: 999;
+}
+
+.work-info__title {
+	font-size: var(--fs-16);
+}
+
+.work-info__details {
+	font-size: var(--fs-21);
+}
+
+.work-info__link {
+	display: block;
+	font-size: var(--fs-14);
+	padding-left: var(--sp-40);
+	position: relative;
+
+	&::after {
+		background-color: var(--c-white);
+		content: "";
+		height: 1px;
+		left: 0;
+		mix-blend-mode: exclusion;
+		position: absolute;
+		top: 0.5rem;
+		transition: 0.5s;
+		width: 30px;
+	}
+}

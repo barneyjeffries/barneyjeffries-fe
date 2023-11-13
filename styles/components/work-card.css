@@ -1,0 +1,13 @@
+.work-card {
+
+	/* Remove this later */
+	position: relative;
+}
+
+.work-card__image-wrap {
+	aspect-ratio: 4 / 2;
+	display: block;
+	margin-left: 55%;
+	max-width: 45%;
+	position: relative;
+}

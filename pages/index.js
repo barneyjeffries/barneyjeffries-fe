@@ -3,8 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
 import { useEffect, useState } from "react";
-import WorkItem from '../components/work/work-item';
-import WorkInfo from '../components/work/work-info';
+import { Work } from '../components/work';
 
 export default function Home( { projects } ) {
 
@@ -15,17 +14,11 @@ export default function Home( { projects } ) {
                 <meta name="description" content="Creative Coder"/>
             </Head>
 
-            <section className="work" style={ {display: 'none'}}>
-                <ul className="work__items">
-                    { projects.map( ( project, i) => (
-                        <WorkItem key={ project.id } index={i} project={project} />
-                    ) ) }
-                </ul>
-            </section>
+            <Work  projects={ projects } />
 
         </>
-    )
-}
+    );
+};
 
 export async function getStaticProps() {
     const res = await fetch(`${process.env.NEXT_PUBLIC_WP_API_URL}wp-json/wp/v2/project?_embed`);

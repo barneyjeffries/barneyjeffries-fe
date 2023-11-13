@@ -1,6 +1,6 @@
 import { useEffect, createRef } from 'react';
 
-export default function WorkInfo( { index, project } ) {
+export const WorkInfo = ( { index, project } ) => {
 
     return (
         <div key={ project.id } className="work-info">
@@ -11,5 +11,5 @@ export default function WorkInfo( { index, project } ) {
             <a href="#" className="work-info__link"
                title={ project.title.rendered }>View project</a>
         </div>
-    )
-}
+    );
+};

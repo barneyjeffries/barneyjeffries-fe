@@ -1,0 +1,8 @@
+.site-main {
+	margin: var(--sp-40);
+	position: relative;
+
+	@media (--bp-normal) {
+		margin: var(--sp-40) var(--sp-140);
+	}
+}
