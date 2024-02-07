@@ -9,7 +9,8 @@ export const WorkInfo = ( { index, project } ) => {
                 { project.acf.overview }
             </p>
             <a href="#" className="work-info__link"
-               title={ project.title.rendered }>View project</a>
+               title={ project.title.rendered }>View project
+            </a>
         </div>
     );
 };

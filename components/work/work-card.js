@@ -25,7 +25,6 @@ export const WorkCard = ({ project } ) => {
                     ) }
                 </a>
             </Link>
-
         </div>
     );
 };
